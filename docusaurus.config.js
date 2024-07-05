@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -37,7 +39,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         // docs: {
@@ -58,7 +60,7 @@ const config = {
         //   // blogSidebarCount: 2
         // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -68,35 +70,37 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: 'manual',
-        path: 'manual',
-        routeBasePath: '/manual',
-        sidebarPath: './sidebars.js',
+        id: "manual",
+        path: "manual",
+        routeBasePath: "/manual",
+        sidebarPath: "./sidebars.js",
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
         editUrl:
-          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: 'lecture',
-        path: 'lecture',
-        routeBasePath: '/lecture',
-        sidebarPath: './sidebars.js',
+        id: "lecture",
+        path: "lecture",
+        routeBasePath: "/lecture",
+        sidebarPath: "./sidebars.js",
         // Please change this to your repo.
         // Remove this to remove the "edit this page" links.
         editUrl:
-          'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
     [
-      '@docusaurus/plugin-content-blog',
+      "@docusaurus/plugin-content-blog",
       {
-        id: 'blog2',
-        routeBasePath: 'blog2',
-        path: './blog2',
+        id: "blog2",
+        routeBasePath: "blog2",
+        path: "./blog2",
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       },
     ],
     // [
@@ -112,6 +116,16 @@ const config = {
     //     },
     //   },
     // ],
+  ],
+
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
   ],
 
   themeConfig:
