@@ -80,19 +80,19 @@ const config = {
           "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "lecture",
-        path: "lecture",
-        routeBasePath: "/lecture",
-        sidebarPath: "./sidebars.js",
-        // Please change this to your repo.
-        // Remove this to remove the "edit this page" links.
-        editUrl:
-          "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-docs",
+    //   {
+    //     id: "lecture",
+    //     path: "lecture",
+    //     routeBasePath: "/lecture",
+    //     sidebarPath: "./sidebars.js",
+    //     // Please change this to your repo.
+    //     // Remove this to remove the "edit this page" links.
+    //     editUrl:
+    //       "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+    //   },
+    // ],
     [
       "@docusaurus/plugin-content-blog",
       {
@@ -134,7 +134,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "KADaP",
+        // title: "KADaP",
         logo: {
           alt: "KADaP",
           src: "img/kadaplogo.jpg",
@@ -153,17 +153,17 @@ const config = {
             position: "left",
             label: "Manual",
           },
-          {
-            // type: "docSidebar",
-            // sidebarId: "defaultSidebar",
-            to: "/lecture/intro",
-            position: "left",
-            label: "Lecture",
-          },
+          // {
+          //   // type: "docSidebar",
+          //   // sidebarId: "defaultSidebar",
+          //   to: "/lecture/intro",
+          //   position: "left",
+          //   label: "Lecture",
+          // },
           { to: "/blog", label: "Blog", position: "left" },
-          { to: "/blog2", label: "Blog2", position: "left" },
+          { to: "/blog2", label: "LLM 정리", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/bigdata-car",
             label: "GitHub",
             position: "right",
           },
