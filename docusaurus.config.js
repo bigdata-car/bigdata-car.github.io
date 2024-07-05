@@ -22,7 +22,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "bigdata-car", // Usually your GitHub org/user name.
   projectName: "bigdata-car.github.io", // Usually your repo name.
-  deploymentBranch: "deployment",
+  deploymentBranch: "gh-pages",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
