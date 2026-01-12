@@ -43,7 +43,6 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
-        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -65,16 +64,16 @@ const config = {
           "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "blog2",
-        routeBasePath: "blog2",
-        path: "./blog2",
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
-      },
-    ],
+    // [
+    //   "@docusaurus/plugin-content-blog",
+    //   {
+    //     id: "blog2",
+    //     routeBasePath: "blog2",
+    //     path: "./blog2",
+    //     remarkPlugins: [remarkMath],
+    //     rehypePlugins: [rehypeKatex],
+    //   },
+    // ],
   ],
 
   stylesheets: [
@@ -110,8 +109,8 @@ const config = {
             position: "left",
             label: "Manual",
           },
-          { to: "/blog", label: "Blog", position: "left" },
-          { to: "/blog2", label: "LLM 정리", position: "left" },
+          { to: "/blog", label: "News", position: "left" },
+          // { to: "/blog2", label: "LLM 정리", position: "left" },
           {
             href: "https://github.com/bigdata-car",
             label: "GitHub",
