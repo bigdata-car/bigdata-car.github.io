@@ -13,7 +13,7 @@ const FeatureList = [
     // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-      자동차 데이터 포털 설명 어쩌구 저쩌구 여기는 자동차 데이터 포털이아ㅣ
+      자동차 데이터 포털
       </>
     ),
     link: "https://portal.bigdata-car.kr"
@@ -24,7 +24,7 @@ const FeatureList = [
     // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        클라우드 설명 어쩌구 저쩌구 여기는 자동차 데이터 포털이아ㅣ
+        자동차 산업 클라우드
       </>
     ),
     link: "https://cloud.bigdata-car.kr"
@@ -35,10 +35,10 @@ const FeatureList = [
     // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        마켓/서비스 플레이스 설명 어쩌구 저쩌구 여기는 자동차 데이터 포털이아ㅣ
+        마켓/서비스 플레이스
       </>
     ),
-    link: "https://market.bigdata-car.kr"
+    link: "https://api.bigdata-car.kr"
   },
 ];
 

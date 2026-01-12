@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          여기에 설명 적당히 하는 UI 하나 만들면 딱 될 것 같음
+          Hello
           {/* {siteConfig.title} */}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
