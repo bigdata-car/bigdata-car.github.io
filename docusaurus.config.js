@@ -42,23 +42,8 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: './sidebars.js',
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   blogTitle: "First-trial",
-        //   blogSidebarTitle: "First-trial sidebar",
-        //   // blogSidebarCount: 2
-        // },
+        docs: false,
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -80,19 +65,6 @@ const config = {
           "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
-    // [
-    //   "@docusaurus/plugin-content-docs",
-    //   {
-    //     id: "lecture",
-    //     path: "lecture",
-    //     routeBasePath: "/lecture",
-    //     sidebarPath: "./sidebars.js",
-    //     // Please change this to your repo.
-    //     // Remove this to remove the "edit this page" links.
-    //     editUrl:
-    //       "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-    //   },
-    // ],
     [
       "@docusaurus/plugin-content-blog",
       {
@@ -103,19 +75,6 @@ const config = {
         rehypePlugins: [rehypeKatex],
       },
     ],
-    // [
-    //   {
-    //     id: "my-blog2",
-    //     routeBasePath: "my-blog2",
-    //     editUrl:
-    //       "https://github.com/facebook/docusaurus/edit/master/website/my-blog2",
-    //     postsPerPage: 2,
-    //     feedOptions: {
-    //       type: "all",
-    //       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-    //     },
-    //   },
-    // ],
   ],
 
   stylesheets: [
@@ -147,19 +106,10 @@ const config = {
             label: "Docs",
           },
           {
-            // type: "docSidebar",
-            // sidebarId: "defaultSidebar",
             to: "/manual/intro",
             position: "left",
             label: "Manual",
           },
-          // {
-          //   // type: "docSidebar",
-          //   // sidebarId: "defaultSidebar",
-          //   to: "/lecture/intro",
-          //   position: "left",
-          //   label: "Lecture",
-          // },
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/blog2", label: "LLM 정리", position: "left" },
           {
