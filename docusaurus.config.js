@@ -98,12 +98,12 @@ const config = {
           src: "img/kadaplogo.jpg",
         },
         items: [
-          {
-            type: "docSidebar",
-            sidebarId: "defaultSidebar",
-            position: "left",
-            label: "Docs",
-          },
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "defaultSidebar",
+          //   position: "left",
+          //   label: "Docs",
+          // },
           {
             to: "/manual/intro",
             position: "left",
