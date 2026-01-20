@@ -10,8 +10,8 @@ import rehypeKatex from "rehype-katex";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "KADaP",
-  // tagline: "KADaP Manual",
+  title: "자동차 산업계를 위한 IT 인프라를 지원합니다.",
+  // tagline: "자동차 데이터 플랫폼은 IT/SW 기술력으로 자동차 산업의 디지털 전환(DX)과 지능화(AX)를 이끄는 통합 데이터 플랫폼입니다.",
   favicon: "img/kadap.jpg",
 
   // Set the production url of your site here
@@ -43,6 +43,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
+        blog: {
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -64,12 +68,34 @@ const config = {
           "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
       },
     ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "usecase",
+        routeBasePath: "usecase",
+        path: "./usecase",
+        blogTitle: '자동차 데이터 활용 사례',
+        blogDescription: 'KADaP를 활용한 다양한 데이터 분석 및 서비스 개발 사례를 소개합니다.',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "faq",
+        routeBasePath: "faq",
+        path: "./faq",
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+      },
+    ],
     // [
     //   "@docusaurus/plugin-content-blog",
     //   {
-    //     id: "blog2",
-    //     routeBasePath: "blog2",
-    //     path: "./blog2",
+    //     id: "publications",
+    //     routeBasePath: "publications",
+    //     path: "./publications",
     //     remarkPlugins: [remarkMath],
     //     rehypePlugins: [rehypeKatex],
     //   },
@@ -95,27 +121,24 @@ const config = {
         // title: "KADaP",
         logo: {
           alt: "KADaP",
-          src: "img/kadaplogo.jpg",
+          src: "img/logo_light.png",
+          srcDark: "img/logo_dark.png",
         },
         items: [
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "defaultSidebar",
-          //   position: "left",
-          //   label: "Docs",
-          // },
+          // { to: "/blog", label: "News", position: "left" },
           {
             to: "/manual/intro",
             position: "left",
             label: "Manual",
           },
-          { to: "/blog", label: "News", position: "left" },
-          // { to: "/blog2", label: "LLM 정리", position: "left" },
+          { to: "/usecase", label: "UseCase", position: "left" },
+          { to: "/faq", label: "FAQ", position: "left" },
           {
             href: "https://github.com/bigdata-car",
             label: "GitHub",
             position: "right",
           },
+          // { to: "/publications", label: "Publications", position: "left" },
         ],
       },
       footer: {
@@ -131,24 +154,7 @@ const config = {
             ],
           },
           {
-            title: "Blog",
-            items: [
-              {
-                label: "KADaP Tech Blog",
-                href: "/blog2",
-              },
-              // {
-              //   label: "Discord",
-              //   href: "https://discordapp.com/invite/docusaurus",
-              // },
-              // {
-              //   label: "Twitter",
-              //   href: "https://twitter.com/docusaurus",
-              // },
-            ],
-          },
-          {
-            title: "KADaP",
+            title: "서비스",
             items: [
               {
                 label: "자동차 데이터 포털",
@@ -159,8 +165,16 @@ const config = {
                 to: "https://cloud.bigdata-car.kr",
               },
               {
-                label: "마켓/서비스 플레이스",
-                to: "https://market.bigdata-car.kr",
+                label: "GPUaaS",
+                to: "https://ide.bigdata-car.kr",
+              },
+              {
+                label: "마켓 플레이스",
+                to: "https://api.bigdata-car.kr",
+              },
+              {
+                label: "자동차 산업 에이전트",
+                to: "https://agent.bigdata-car.kr",
               },
             ],
           },

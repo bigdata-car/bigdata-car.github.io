@@ -14,3 +14,11 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+KADaP:
+  label: KADaP
+  permalink: /KADaP
+  description: KADaP tag description
+LLM:
+  label: LLM
+  permalink: /llm
+  description: Overview of Large Language Models

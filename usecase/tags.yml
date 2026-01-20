@@ -1,0 +1,10 @@
+LLM:
+  label: LLM
+  permalink: /llm
+  description: Overview of Large Language Models
+
+Chatbot:
+  label: Chatbot
+  permalink: /chatbot
+  description: Overview of Chatbot
+  

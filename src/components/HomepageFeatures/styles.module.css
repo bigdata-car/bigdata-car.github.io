@@ -9,3 +9,18 @@
   height: 200px;
   width: 200px;
 }
+
+.featureImg {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+:global(html[data-theme='dark']) .featureImg {
+  filter: invert(100%);
+}
+
+.featureDescription {
+  font-size: 0.9rem;
+  color: var(--ifm-color-content-secondary); /* Adapts to light/dark mode */
+}

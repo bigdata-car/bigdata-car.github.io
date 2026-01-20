@@ -1,0 +1,120 @@
+---
+slug: Customizing-Chatbot
+title: Customizing-Chatbot
+authors: [jklee2]
+date: 2026-01-19
+tag: [Chatbot]
+image: /img/usecase/chainlit.png
+description: Chainlit 을 이용한 customizing chatbot 구축하기
+---
+
+|항목|Chainlit|CopilotKit|Assistant-UI|Prompt-Kit|
+|---|---|---|---|---|
+|GitHub Starts|10,900|27,700|7,300|1,900|
+|Frontend|React|React|React|React|
+|스트리밍|🟢 지원|⚠️ 커스텀|🟢 지원|❌ 직접 구현|
+|파일 업로드|🟢 지원|⚠️ 커스텀|⚠️ 커스텀|⚠️ 커스텀|
+|마크다운|🟢 지원|⚠️ 커스텀|🟢 지원|⚠️ 커스텀|
+|코드 하이라이팅|🟢 지원|⚠️ 커스텀|🟢 지원|⚠️ 커스텀|
+|Chain of Thought|🟢 지원|❌|❌|⚠️ 커스텀|
+|멀티모달|⚠️ 제한적|🟢 지원|🟢 지원|⚠️ 제한적|
+|MCP 지원|🟢 지원|⚠️ 커스텀|⚠️ 커스텀|❌|
+|자체 호스팅|🟢 지원|🟢 지원|🟢 지원|🟢 지원|
+|구현 난이도|낮음|중간|높음|중간|
+
+<br/>
+
+## **Chainlit**
+
+[Chainlit](https://github.com/Chainlit/chainlit?tab=readme-ov-file) 은 *python* 기반 대화형 AI 구축하기 위한 오픈소스 패키지 
+
+### **1. Installation**
+- Chainlit requires `python>=3.9`
+<br/><br/>
+
+
+pip 를 이용해서 Chainlit을 설치합니다.
+```bash
+pip install chainlit
+```
+
+설치하면 bash 환경에서 chainlit 명령어를 사용할 수 있게 됩니다.
+```bash
+chainlit hello
+```
+
+이 명령어를 실행하면 Chainlit이 기본 템플릿을 사용하여 간단한 대화형 AI 애플리케이션을 생성합니다.
+
+<figure><img src="/img/usecase/Chainlit-installation.png" alt="Chainlit Installation" /><figcaption>Chainlit Installation</figcaption></figure>
+
+### **2. Python tutorial**
+Chainlit 은 python 으로 LLM 앱을 구축할 수 있도록 지원합니다.
+
+- `chainlit` 패키지 임포트하고 챗봇 UI에 들어오는 메시지 처리하는 함수를 정의합니다.
+- `main` 함수는 사용자가 챗봇 UI에 메시지를 입력할 때마다 호출되며, 함수 내부에 텍스트 분석, API 호출, 결과 계산 등 로직 구현할 수 있습니다.
+
+```python
+import chainlit as cl
+
+
+@cl.on_message
+async def main(message: cl.Message):
+    # Your custom logic goes here...
+
+    # Send a response back to the user
+    await cl.Message(
+        content=f"Received: {message.content}",
+    ).send()
+```
+
+- `chainlit run` 명령어를 사용하여 애플리케이션을 실행합니다.
+```bash
+chainlit run app.py -w
+```
+
+<figure><img src="/img/usecase/Chainlit-python.png" alt="Chainlit Python" /><figcaption>Chainlit Python</figcaption></figure>
+
+### **3. OpenAI API 연동**
+OpenAI 또는 외부 LLM 모델을 API 형태로 연동할 수 있습니다.
+
+- OpenAI API 키를 환경 변수로 설정하고, chainlit 과 연동하여 OpenAI 의 LLM 모델을 사용할 수 있습니다.
+- `.env` 파일에 OpenAI API 키를 설정합니다.
+
+[.env]
+```bash
+OPENAI_API_KEY=your-openai-api-key
+```
+
+[app.py]
+```python
+from openai import AsyncOpenAI
+import chainlit as cl
+client = AsyncOpenAI()
+
+# Instrument the OpenAI client
+cl.instrument_openai()
+
+settings = {
+    "model": "gpt-3.5-turbo",
+    "temperature": 0,
+    # ... more settings
+}
+
+@cl.on_message
+async def on_message(message: cl.Message):
+    response = await client.chat.completions.create(
+        messages=[
+            {
+                "content": "You are a helpful bot, you always reply in Spanish",
+                "role": "system"
+            },
+            {
+                "content": message.content,
+                "role": "user"
+            }
+        ],
+        **settings
+    )
+    await cl.Message(content=response.choices[0].message.content).send()
+```
+
