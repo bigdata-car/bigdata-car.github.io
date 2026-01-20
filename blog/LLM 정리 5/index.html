@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">LLM 정리 5 | 자동차 산업계를 위한 IT 인프라를 지원합니다.</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bigdata-car.github.io/blog/LLM 정리 5"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="LLM 정리 5 | 자동차 산업계를 위한 IT 인프라를 지원합니다."><meta data-rh="true" name="description" content="2. LLM은 어떻게 동작하는가"><meta data-rh="true" property="og:description" content="2. LLM은 어떻게 동작하는가"><meta data-rh="true" property="og:image" content="https://bigdata-car.github.io/img/KADaP_portal.jpg"><meta data-rh="true" name="twitter:image" content="https://bigdata-car.github.io/img/KADaP_portal.jpg"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2024-07-08T00:00:00.000Z"><meta data-rh="true" property="article:author" content="https://github.com/bigdata-car"><meta data-rh="true" property="article:tag" content="LLM"><link data-rh="true" rel="icon" href="/img/kadap.jpg"><link data-rh="true" rel="canonical" href="https://bigdata-car.github.io/blog/LLM 정리 5"><link data-rh="true" rel="alternate" href="https://bigdata-car.github.io/blog/LLM 정리 5" hreflang="en"><link data-rh="true" rel="alternate" href="https://bigdata-car.github.io/blog/LLM 정리 5" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://bigdata-car.github.io/blog/LLM 정리 5","mainEntityOfPage":"https://bigdata-car.github.io/blog/LLM 정리 5","url":"https://bigdata-car.github.io/blog/LLM 정리 5","headline":"LLM 정리 5","name":"LLM 정리 5","description":"2. LLM은 어떻게 동작하는가","datePublished":"2024-07-08T00:00:00.000Z","author":{"@type":"Person","name":"강병수","description":"데이터플랫폼연구센터 책임연구원","url":"https://github.com/bigdata-car"},"image":{"@type":"ImageObject","@id":"https://bigdata-car.github.io/img/KADaP_portal.jpg","url":"https://bigdata-car.github.io/img/KADaP_portal.jpg","contentUrl":"https://bigdata-car.github.io/img/KADaP_portal.jpg","caption":"title image for the blog post: LLM 정리 5"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://bigdata-car.github.io/blog","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. Atom Feed">
+
+
+
+
+<link rel="alternate" type="application/rss+xml" href="/usecase/rss.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/usecase/atom.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. Atom Feed">
+<link rel="alternate" type="application/rss+xml" href="/faq/rss.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/faq/atom.xml" title="자동차 산업계를 위한 IT 인프라를 지원합니다. Atom Feed">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css" integrity="sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM" crossorigin="anonymous"><link rel="stylesheet" href="/assets/css/styles.fcbc6eba.css">
+<script src="/assets/js/runtime~main.7d03ef48.js" defer="defer"></script>
+<script src="/assets/js/main.7cd7f8d9.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo_light.png" alt="KADaP" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo_dark.png" alt="KADaP" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a class="navbar__item navbar__link" href="/manual/intro">Manual</a><a class="navbar__item navbar__link" href="/usecase">UseCase</a><a class="navbar__item navbar__link" href="/faq">FAQ</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/bigdata-car" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/welcome">Welcome</a></li><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/blog/LLM 정리 5">LLM 정리 5</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/LLM 정리 4">LLM 정리 4</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/LLM 정리 3">LLM 정리 3</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/LLM 정리 1">LLM 정리 1</a></li></ul></nav></aside><main class="col col--7"><article><header><h1 class="title_f1Hy">LLM 정리 5</h1><div class="container_mt6G margin-vert--md"><time datetime="2024-07-08T00:00:00.000Z">July 8, 2024</time> · <!-- -->11 min read</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--6 authorCol_Hf19"><div class="avatar margin-bottom--sm"><div class="avatar__intro"><div class="avatar__name"><a href="https://github.com/bigdata-car" target="_blank" rel="noopener noreferrer"><span>강병수</span></a></div><small class="avatar__subtitle">데이터플랫폼연구센터 책임연구원</small></div></div></div></div></header><div id="__blog-post-container" class="markdown"><h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-llm은-어떻게-동작하는가">2. LLM은 어떻게 동작하는가<a class="hash-link" aria-label="Direct link to 2. LLM은 어떻게 동작하는가" title="Direct link to 2. LLM은 어떻게 동작하는가" href="/blog/LLM 정리 5#2-llm은-어떻게-동작하는가">​</a></h2>
+<ul>
+<li>
+<p>개요에서 언급한 것 처럼 LLM은 이전 토큰 세트를 기반으로 다음 토큰을 예측하도록 훈련되었습니다. 이는 생성기능을 활성화 하는 자동회귀 방식(autoregressive, 현재 생성된 토큰은 다음 토큰을 생성하기 위한 입력으로 거대언어모델에 재입력 됨)을 수행하여 생성을 가능하게 합니다.</p>
+</li>
+<li>
+<p>첫 번째 단계에서 받은 프롬프트를 토큰화 하고 이를 임베딩으로 변환하는 작업이 수행 됩니다. 임베딩은 입력 텍스트의 벡터 표현입니다. 이러한 임베딩은 무작위로 초기화되어 입력 토큰의 비 의미론적인 벡터 형태를 나타냅니다. 그리고, 모델 훈련 과정에서 맥락화되는 학습이 수행됩니다.</p>
+</li>
+<li>
+<p>다음으로, 레이어별 어텐션(attentation) 및 피드포워드 연산을 수행하여 최종적으로 어휘의 각 단어에 숫자 또는 로짓(logit)을 출력하거나(GPT-N, LLaMA 등의 디코더 모델) 의미론적 임베딩을 출력합니다(BERT와 같은 인코더 모델 및 RoBERTa, ELECTRA 등과 같은 변형 모델).</p>
+</li>
+<li>
+<p>마지막으로 디코더 모델의 경우 다음 단계는 각 (정규화되지 않은) 로짓을 (정규화된) 확률 분포(Softmax 함수를 통해)로 변환하여 텍스트에서 다음에 올 단어를 결정하는 것입니다.</p>
+</li>
+<li>
+<p>아래와 같이 단계를 더 자세히 살펴보겠 습니다 :</p>
+<ol>
+<li>
+<p><strong>토큰화</strong> :</p>
+<ul>
+<li>LLM이 처리를 하기 전에 원시 입력 텍스트는 더 작은 단위(종종 하위 단어 또는 단어)로 토큰화 하여 모델이 인식할 수 있는 조각으로 입력을 나눕니다.</li>
+<li>모델에는 고정된 어휘목록(vocabulary)이 있습니다. 따라서, 토큰화 단계는 입력이 어휘목록과 일치하는 형식이 되도록 보장하기 때문에 매우 중요합니다.</li>
+<li>GPT-3.5 및 GPT-4용 OpenAI 토크나이저는 <a href="https://platform.openai.com/tokenizer" target="_blank" rel="noopener noreferrer">여기</a>에서 찾을 수 있습니다.</li>
+<li>자세한 내용은 <a href="https://aman.ai/primers/ai/tokenizer/" target="_blank" rel="noopener noreferrer">토큰화에 대한 입문서</a>를 참조하세요.</li>
+</ul>
+</li>
+<li>
+<p><strong>임베딩</strong> :</p>
+<ul>
+<li>각 토큰은 임베딩 매트릭스를 사용하여 고차원 벡터에 매핑됩니다. 이 벡터 표현은 토큰의 맥락적 의미를 포착하며 모델의 다음 레이어에 입력으로 사용됩니다.</li>
+<li>토큰의 순서에 대한 정보를 모델에 제공하기 위해 매핑된 임베딩에 위치 인코딩(positional encoding)이 추가됩니다. 이는 트랜스포머와 같은 모델이 고유한 순서 인식을 갖고 있지 않기 때문에 특히 중요합니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>트랜스포머 구조</strong> :</p>
+<ul>
+<li>대부분의 최신 LLM의 핵심은 트랜스포머 구조입니다.</li>
+<li>트랜스포머는 여러 레이어로 구성되어 있으며, 각 레이어에는 두 가지 주요 구성 요소가 있습니다 : multi-head self-attention 메커니즘과 position-wise feed-forward network 입니다.</li>
+<li>자기 어텐션 메커니즘(self-attention mechanism)은 각 토큰들이 자신과 관련해 중요성을 갖는 다른 토큰들에게 가중치를 부여할 수 있게 합니다. 이는 본질적으로 주어진 토큰과 관련있는 특정 부분에 대해 모델이 &quot;주의를 기울일&quot; 수 있도록 합니다.</li>
+<li>어텐션 연산된 결과는, 각 위치에서 독립적으로 피드포워드 신경망으로 전달됩니다.</li>
+<li>자세한 내용은 <a href="https://aman.ai/primers/ai/transformers/" target="_blank" rel="noopener noreferrer">트랜스포머 아키텍처에 대한 입문서</a>를 참조하세요.</li>
+</ul>
+</li>
+<li>
+<p><strong>잔차연결 (Residual Connection)</strong> :</p>
+<ul>
+<li>모델의 각 하위 계층(예: 자기 어텐션 또는 피드포워드 신경망)은 주변에 잔여 연결이 적용된 후 계층 정규화가 수행됩니다. 이는 활성화를 안정화하고 훈련 속도를 높이는 데 도움이 됩니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>출력 레이어</strong> :</p>
+<ul>
+<li>모든 트랜스포머 레이어를 통과한 후, 각 토큰의 최종 표현은 모델의 어휘목록에 있는 각 단어에 대응하는 로짓 벡터로 변환됩니다.</li>
+<li>이러한 로짓은 어휘 목록의 각 단어들이 시퀀스의 다음 단어가 될 가능성을 설명합니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>확률분포</strong> :</p>
+<ul>
+<li>로짓을 확률로 변환하기 위해 Softmax 함수가 적용됩니다. 이는 모두 0과 1 사이에 있고 합이 1이 되도록 로짓을 정규화합니다.</li>
+<li>어휘 목록의 단어들 중 확률이 가장 높은 단어가 시퀀스의 다음 단어로 선택될 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>디코딩 (Decoding)</strong> :</p>
+<ul>
+<li>적용되는 상황에 따라 일관되고 문맥에 맞는 시퀀스를 생성하기 위하여, 그리디 디코딩(greedy decoding), 빔 검색(beam search), Top-K 샘플링(top-k sampling)과 같은 다양한 디코딩 전략이 사용됩니다.</li>
+<li>자세한 내용은 <a href="https://aman.ai/primers/ai/token-sampling/" target="_blank" rel="noopener noreferrer">토큰 샘플링 방법</a>에 대한 입문서를 참조하세요.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>여러  단계의 프로세스를 통해, LLM은 인간과 유사한 텍스트를 생성하고, 맥락을 이해하고, 프롬프트에 대한 관련 응답이나 완성을 제공할 수 있습니다.</p>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-llm-학습-단계">2.1. LLM 학습 단계<a class="hash-link" aria-label="Direct link to 2.1. LLM 학습 단계" title="Direct link to 2.1. LLM 학습 단계" href="/blog/LLM 정리 5#21-llm-학습-단계">​</a></h3>
+<ul>
+<li>상위 수준에서, LLMs의 훈련에 포함되는 단계는 다음과 같습니다:<!-- -->
+<ol>
+<li><strong>문서(코퍼스, corpus) 준비</strong> : 뉴스 기사, 소셜 미디어 게시물, 웹 문서 등 대규모 텍스트 데이터 모음을 수집합니다.</li>
+<li><strong>토큰화</strong> : 텍스트를 토큰이라고 하는 개별 단어 또는 하위 단어로 분할합니다.</li>
+<li><strong>임베딩 생성</strong> : 일반적으로 훈련을 처음 시작할 때 PyTorch의 <a href="https://pytorch.org/docs/stable/generated/torch.nn.Embedding.html" target="_blank" rel="noopener noreferrer"><code>nn.Embedding</code></a> 클래스를 통해 랜덤하게 초기화된 임베딩 테이블을 사용합니다. 또한, Word2Vec, GloVe, FastText 등과 같은 사전 훈련된 임베딩도 사용할 수 있습니다. 이러한 임베딩은 입력 토큰의 맥락화되지 않은 벡터 형식을 나타냅니다.</li>
+<li><strong>신경망 훈련</strong> : 입력 토큰에 대한 신경망 모델을 훈련합니다.<!-- -->
+<ul>
+<li>BERT 및 그 변형과 같은 인코더 모델의 경우 모델은 마스킹된 특정 단어의 전후 맥락(주변 단어)을 예측하는 방법을 학습합니다.</li>
+<li>BERT는 특히 마스킹된 단어를 예측하는 마스크드 언어 모델링 작업(Masked Language Modeling task 또는 Cloze task)과 다음 문장 예측 작업으로 훈련되었습니다; <a href="https://aman.ai/primers/ai/bert/" target="_blank" rel="noopener noreferrer">BERT 입문서</a>에 설명되어 있습니다.</li>
+<li>GPT-N, LLaMA 등과 같은 디코더 모델의 경우 주어진 이전 토큰들의 맥락을 고려하여 시퀀스의 다음 토큰을 예측하는 방법을 학습합니다.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-추론-reasoning">2.2. 추론 (Reasoning)<a class="hash-link" aria-label="Direct link to 2.2. 추론 (Reasoning)" title="Direct link to 2.2. 추론 (Reasoning)" href="/blog/LLM 정리 5#22-추론-reasoning">​</a></h3>
+<ul>
+<li>LLM에서 추론이 어떻게 작동하는지 살펴보겠습니다; 우리는 추론을 “증거와 논리를 사용하여 추론하는 능력”으로 정의할 것입니다. <a href="https://arxiv.org/pdf/2302.07842" target="_blank" rel="noopener noreferrer">(source)</a></li>
+<li>추론에는 상식적 추론이나 수학적 추론과 같이 다양한 종류가 있습니다.</li>
+<li>마찬가지로, 모델에서 추론을 이끌어내는 방법 또한 다양하며 그 중 하나는 여기에서 언급하는 생각의 사슬(chain-of-thought) 프롬프팅 입니다.</li>
+<li>추론과 사실적 정보를 분리하여 최종 결과에 대한 기여도를 분석하는 것은 간단한 일이 아니기 때문에, LLM이 최종 예측을 위해 얼마나 많은 추론을 하는지 아직 알 수 없다는 점을 유의하는 것이 중요합니다.</li>
+</ul></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a title="Overview of Large Language Models" class="tag_zVej tagRegular_sFm0" href="/blog/tags/llm">LLM</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/blog/welcome"><div class="pagination-nav__sublabel">Newer Post</div><div class="pagination-nav__label">Welcome</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/blog/LLM 정리 4"><div class="pagination-nav__sublabel">Older Post</div><div class="pagination-nav__label">LLM 정리 4</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/blog/LLM 정리 5#2-llm은-어떻게-동작하는가">2. LLM은 어떻게 동작하는가</a><ul><li><a class="table-of-contents__link toc-highlight" href="/blog/LLM 정리 5#21-llm-학습-단계">2.1. LLM 학습 단계</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/LLM 정리 5#22-추론-reasoning">2.2. 추론 (Reasoning)</a></li></ul></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/manual/intro">KADaP 사용 메뉴얼</a></li></ul></div><div class="col footer__col"><div class="footer__title">서비스</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://portal.bigdata-car.kr" target="_blank" rel="noopener noreferrer" class="footer__link-item">자동차 데이터 포털</a></li><li class="footer__item"><a href="https://cloud.bigdata-car.kr" target="_blank" rel="noopener noreferrer" class="footer__link-item">자동차 산업 클라우드</a></li><li class="footer__item"><a href="https://ide.bigdata-car.kr" target="_blank" rel="noopener noreferrer" class="footer__link-item">GPUaaS</a></li><li class="footer__item"><a href="https://api.bigdata-car.kr" target="_blank" rel="noopener noreferrer" class="footer__link-item">마켓 플레이스</a></li><li class="footer__item"><a href="https://agent.bigdata-car.kr" target="_blank" rel="noopener noreferrer" class="footer__link-item">자동차 산업 에이전트</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 KATECH(Korea Automotive Technology Institute) All right reserved</div></div></div></footer></div>
+</body>
+</html>
