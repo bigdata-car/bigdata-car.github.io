@@ -1,0 +1,66 @@
+# ubuntu MATE 22.04 에서 한글 설정 하기 
+
+본 문서에서는 ubuntu MATE 22.04 에서 한글을 입력하기 위한 방법을 다루고 있습니다. 
+
+우분투의 기본 데스크탑 환경은 `GNOME`이지만,  네트워크 원격 접속시 최적화를위해 경량화된 `MATE` 데스크탑을 사용하기도 합니다. 
+
+:::info
+ `자동차 산업 클라우드`에서 기본 데스크탑 환경으로 'MATE'를 제공합니다.  
+:::
+
+## 1. VM생성 및 서버 접속 하기 
+
+:::info
+작성중
+:::
+
+## 2. ibus-hangul 설치 
+
+### 2.1 패키지 설치 
+
+`sudo apt install ibus-hangul` #재부팅 필수
+
+### 2.2 ibus설정 
+
+화면 이동 : 좌상단 Menu > Control Center > Other > Ibus Preferences 
+<img width="486" height="589" alt="image" src="https://github.com/user-attachments/assets/3a831d97-d335-4416-a411-2b7efd34abf8" />
+
+### 2.3 input method 추가 
+
+- input method > add > korean > Hangul > add
+
+|<img width="1053" height="729" alt="image" src="https://github.com/user-attachments/assets/834d9816-81f6-41ab-9f39-9503fb2ebb69" />|
+|-|
+|ibus-hangul 설치 전|
+|<img width="1109" height="749" alt="image" src="https://github.com/user-attachments/assets/0edfafe7-a681-4e66-890e-e9479a0ca01a" />|
+|ibus-hangul 설치 후|
+> 한글 입력은 `korean`이 아닌 `Hangul`이 선택되어 있어야 가능 합니다.
+
+<img width="639" height="514" alt="image" src="https://github.com/user-attachments/assets/c11589f8-b2de-4c25-8ae4-60778836cb55" />
+
+### 2.4 한글 입력 활성화 
+
+우상단 `EN` 클릭후 `Korean-Hangul` 선택
+
+
+|<img width="240" height="92" alt="image" src="https://github.com/user-attachments/assets/addb3b8f-46ed-41d0-8d63-c5e5f8b68ed6" />|<img width="236" height="164" alt="image" src="https://github.com/user-attachments/assets/59c80be8-9c0d-49ff-8d50-316a1e283ba5" />|
+|-|-|
+|활성화 전|활성화 후|
+
+### 2.5 한영변환 키
+
+`Shift` + `Space`로 한/영 변환 하여 사용
+
+<img width="637" height="452" alt="image" src="https://github.com/user-attachments/assets/95c21fe7-4448-45e2-bad5-575f8803a7d1" />
+
+---
+
+## 3. Tip
+
+### 작성 중 글자 자동 삭제시
+
+입력시 마지막 글자 or 작성중 글자 자동 삭제 되는 이슈 
+
+Ubuntu의 이모지 단축키와 충돌나는 현상으로 해당 단축키를 삭제 
+<img width="636" height="514" alt="image" src="https://github.com/user-attachments/assets/af22dd55-e525-4d6b-a900-a30b1d474f18" />
+

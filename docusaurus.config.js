@@ -10,7 +10,7 @@ import rehypeKatex from "rehype-katex";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "자동차 산업계를 위한 IT 인프라를 지원합니다.",
+  title: "자동차 산업을 위한 IT기술을 연구 합니다. ",
   // tagline: "자동차 데이터 플랫폼은 IT/SW 기술력으로 자동차 산업의 디지털 전환(DX)과 지능화(AX)를 이끄는 통합 데이터 플랫폼입니다.",
   //컨텐츠 위치 : ./src/components/index.js
   favicon: "img/kadap.jpg",
@@ -75,8 +75,8 @@ const config = {
         id: "usecase",
         routeBasePath: "usecase",
         path: "./usecase",
-        blogTitle: '자동차 데이터 활용 사례',
-        blogDescription: 'KADaP를 활용한 다양한 데이터 분석 및 서비스 개발 사례를 소개합니다.',
+        blogTitle: '활용 사례',
+        blogDescription: '자동차 데이터 플랫폼을 활용한 개발 및 서비스 사례를 소개 합니다.',
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
       },

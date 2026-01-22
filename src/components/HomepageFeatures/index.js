@@ -9,65 +9,66 @@ import sw_img from "../../../static/img/home/sw_api.png";
 
 const FeatureList = [
   {
-    title: "클라우드",
-    image: cloud_img,
+    title: "데이터 플랫폼 기술",
+    image: storage_img,
     // Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-      {/* <strong>클라우드</strong> <br /> */}
-      <br />
-      SW/SDV 개발을 위한 1,096개 가상머신 <br />
-      사용자 목적에 맞는 OS / SW 선택 <br />
-      자체 개발 Web 인터페이스 제공
+        {/* <strong>데이터 플랫폼 기술</strong> <br /> */}
+        차량 및 제조 공정 데이터의<br></br>
+        수집-전처리-분석-관리를 위한<br></br>
+        기술과 서비스 개발<br></br>
+
       </>
     ),
-    link: "https://cloud.bigdata-car.kr"
+    //link: "https://cloud.bigdata-car.kr"
   },
   {
-    title: "스토리지",
-    image: storage_img,
+    title: "클라우드 기술",
+    image: cloud_img,
     // Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-      {/* <strong>스토리지</strong> <br /> */}
-      <br />
-      개별 저장공간 지원 및 <br />
-      기관별 최대 7,000TB 저장공간 <br />
-      S3 호환 업로드/다운로드 환경 제공 <br />
-      소스코드(git), 컨테이너(harbor) 저장 가능
+        {/* <strong>클라우드 기술</strong> <br /> */}
+        대규모 컴퓨팅 자원을 <br></br>
+        클러스터링과 가상화하여 <br></br>
+        SDV/SW개발 및 시뮬레이션<br></br>
+        환경 제공 기술 개발
+
       </>
     ),
-    link: "https://portal.bigdata-car.kr"
+    //link: "https://portal.bigdata-car.kr"
   },
   {
-    title: "GPUaaS",
+    title: "원격 분산 클라우드 기술",
     image: gpuaas_img,
     // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-      {/* <strong>GPUaaS</strong> <br /> */}
-      <br />
-      AI 개발 학습을 위한 MLOps 솔루션 <br />
-      보유 GPU(H100, A100, L40S) 및 공유 GPU(B200, 4080) 등 180 여대 GPU 활용 <br />
-      Web 인터페이스 제공
+        {/* <strong>원격 분산 클라우드 기술</strong> <br /> */}
+        자율주행차량 및 엣지장비의 <br></br>
+        컴퓨팅 자원을 DePIN 기술로 <br></br>
+        네트워크 연결하여 관리 및  <br></br>
+        활용 하는 기술 개발
+
       </>
     ),
-    link: "https://ide.bigdata-car.kr"
+    //link: "https://ide.bigdata-car.kr"
   },
   {
-    title: "SW/API",
+    title: "원격 분산 AI 학습 기술",
     image: sw_img,
     // Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-      {/* <strong>SW/API</strong> <br /> */}
-      <br />
-      SW 개발에 필요한 툴, AI 모델, <br />
-      알고리즘을 Web 또는 API 형태 제공 <br />
-      LLM 모델 (약 600종) 신청 후 바로 사용 가능 <br />
+        {/* <strong>원격 분산 AI 학습 기술</strong> <br /> */}
+        초거대 AI 모델을 원격의   <br></br>
+        다중 장비간 연계 학습을 위한   <br></br>
+        GPU, 메모리, 네트워크   <br></br>
+        한계 극복 기술 개발 <br></br>
       </>
     ),
-    link: "https://api.bigdata-car.kr"
+    //link: "https://api.bigdata-car.kr"
   },
 ];
 
