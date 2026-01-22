@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</title>
+        <title>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</title>
         <link>https://bigdata-car.github.io/faq</link>
-        <description>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</description>
-        <lastBuildDate>Tue, 20 Jan 2026 09:13:55 GMT</lastBuildDate>
+        <description>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</description>
+        <lastBuildDate>Thu, 22 Jan 2026 09:26:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[dpkg frontend lock 에러]]></title>
+            <title><![CDATA[ubuntu MATE 22.04 에서 한글 설정 하기]]></title>
+            <link>https://bigdata-car.github.io/faq/faq3</link>
+            <guid>https://bigdata-car.github.io/faq/faq3</guid>
+            <pubDate>Thu, 22 Jan 2026 09:26:24 GMT</pubDate>
+            <description><![CDATA[본 문서에서는 ubuntu MATE 22.04 에서 한글을 입력하기 위한 방법을 다루고 있습니다.]]></description>
+            <content:encoded><![CDATA[<p>본 문서에서는 ubuntu MATE 22.04 에서 한글을 입력하기 위한 방법을 다루고 있습니다.</p>
+<p>우분투의 기본 데스크탑 환경은 <code>GNOME</code>이지만,  네트워크 원격 접속시 최적화를위해 경량화된 <code>MATE</code> 데스크탑을 사용하기도 합니다.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p><code>자동차 산업 클라우드</code>에서 기본 데스크탑 환경으로 'MATE'를 제공합니다.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-vm생성-및-서버-접속-하기">1. VM생성 및 서버 접속 하기<a class="hash-link" aria-label="Direct link to 1. VM생성 및 서버 접속 하기" title="Direct link to 1. VM생성 및 서버 접속 하기" href="https://bigdata-car.github.io/faq/faq3#1-vm%EC%83%9D%EC%84%B1-%EB%B0%8F-%EC%84%9C%EB%B2%84-%EC%A0%91%EC%86%8D-%ED%95%98%EA%B8%B0">​</a></h2>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>작성중</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-ibus-hangul-설치">2. ibus-hangul 설치<a class="hash-link" aria-label="Direct link to 2. ibus-hangul 설치" title="Direct link to 2. ibus-hangul 설치" href="https://bigdata-car.github.io/faq/faq3#2-ibus-hangul-%EC%84%A4%EC%B9%98">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-패키지-설치">2.1 패키지 설치<a class="hash-link" aria-label="Direct link to 2.1 패키지 설치" title="Direct link to 2.1 패키지 설치" href="https://bigdata-car.github.io/faq/faq3#21-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98">​</a></h3>
+<p><code>sudo apt install ibus-hangul</code> #재부팅 필수</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-ibus설정">2.2 ibus설정<a class="hash-link" aria-label="Direct link to 2.2 ibus설정" title="Direct link to 2.2 ibus설정" href="https://bigdata-car.github.io/faq/faq3#22-ibus%EC%84%A4%EC%A0%95">​</a></h3>
+<p>화면 이동 : 좌상단 Menu &gt; Control Center &gt; Other &gt; Ibus Preferences</p>
+<img width="486" height="589" alt="image" src="https://github.com/user-attachments/assets/3a831d97-d335-4416-a411-2b7efd34abf8">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-input-method-추가">2.3 input method 추가<a class="hash-link" aria-label="Direct link to 2.3 input method 추가" title="Direct link to 2.3 input method 추가" href="https://bigdata-car.github.io/faq/faq3#23-input-method-%EC%B6%94%EA%B0%80">​</a></h3>
+<ul>
+<li>input method &gt; add &gt; korean &gt; Hangul &gt; add</li>
+</ul>
+<table><thead><tr><th><img width="1053" height="729" alt="image" src="https://github.com/user-attachments/assets/834d9816-81f6-41ab-9f39-9503fb2ebb69"></th></tr></thead><tbody><tr><td>ibus-hangul 설치 전</td></tr><tr><td><img width="1109" height="749" alt="image" src="https://github.com/user-attachments/assets/0edfafe7-a681-4e66-890e-e9479a0ca01a"></td></tr><tr><td>ibus-hangul 설치 후</td></tr></tbody></table>
+<blockquote>
+<p>한글 입력은 <code>korean</code>이 아닌 <code>Hangul</code>이 선택되어 있어야 가능 합니다.</p>
+</blockquote>
+<img width="639" height="514" alt="image" src="https://github.com/user-attachments/assets/c11589f8-b2de-4c25-8ae4-60778836cb55">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-한글-입력-활성화">2.4 한글 입력 활성화<a class="hash-link" aria-label="Direct link to 2.4 한글 입력 활성화" title="Direct link to 2.4 한글 입력 활성화" href="https://bigdata-car.github.io/faq/faq3#24-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%ED%99%9C%EC%84%B1%ED%99%94">​</a></h3>
+<p>우상단 <code>EN</code> 클릭후 <code>Korean-Hangul</code> 선택</p>
+<table><thead><tr><th><img width="240" height="92" alt="image" src="https://github.com/user-attachments/assets/addb3b8f-46ed-41d0-8d63-c5e5f8b68ed6"></th><th><img width="236" height="164" alt="image" src="https://github.com/user-attachments/assets/59c80be8-9c0d-49ff-8d50-316a1e283ba5"></th></tr></thead><tbody><tr><td>활성화 전</td><td>활성화 후</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="25-한영변환-키">2.5 한영변환 키<a class="hash-link" aria-label="Direct link to 2.5 한영변환 키" title="Direct link to 2.5 한영변환 키" href="https://bigdata-car.github.io/faq/faq3#25-%ED%95%9C%EC%98%81%EB%B3%80%ED%99%98-%ED%82%A4">​</a></h3>
+<p><code>Shift</code> + <code>Space</code>로 한/영 변환 하여 사용</p>
+<img width="637" height="452" alt="image" src="https://github.com/user-attachments/assets/95c21fe7-4448-45e2-bad5-575f8803a7d1">
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-tip">3. Tip<a class="hash-link" aria-label="Direct link to 3. Tip" title="Direct link to 3. Tip" href="https://bigdata-car.github.io/faq/faq3#3-tip">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="작성-중-글자-자동-삭제시">작성 중 글자 자동 삭제시<a class="hash-link" aria-label="Direct link to 작성 중 글자 자동 삭제시" title="Direct link to 작성 중 글자 자동 삭제시" href="https://bigdata-car.github.io/faq/faq3#%EC%9E%91%EC%84%B1-%EC%A4%91-%EA%B8%80%EC%9E%90-%EC%9E%90%EB%8F%99-%EC%82%AD%EC%A0%9C%EC%8B%9C">​</a></h3>
+<p>입력시 마지막 글자 or 작성중 글자 자동 삭제 되는 이슈</p>
+<p>Ubuntu의 이모지 단축키와 충돌나는 현상으로 해당 단축키를 삭제</p>
+<img width="636" height="514" alt="image" src="https://github.com/user-attachments/assets/af22dd55-e525-4d6b-a900-a30b1d474f18">]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[(클라우드) dpkg frontend lock 에러 발생시 해결법]]></title>
             <link>https://bigdata-car.github.io/faq/FAQ-1</link>
             <guid>https://bigdata-car.github.io/faq/FAQ-1</guid>
             <pubDate>Tue, 20 Jan 2026 09:13:55 GMT</pubDate>
@@ -24,7 +63,7 @@
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">$ sudo systemctl -f stop unattended-upgrades #패지지 자동 업데이트 프로제스 종료하기</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ sudo apt remove unattended-upgrades # 패지지 자동 업데이트기능 제거 (재부팅 필요 할수 있음)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ systemctl status unattended-upgrades # 비활성화 확인</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[MIG 기반 병렬 GPU 사용하기]]></title>
+            <title><![CDATA[(GPUaaS) A100 GPU 병렬 사용하기-MIG 기반]]></title>
             <link>https://bigdata-car.github.io/faq/FAQ-2</link>
             <guid>https://bigdata-car.github.io/faq/FAQ-2</guid>
             <pubDate>Tue, 20 Jan 2026 09:13:55 GMT</pubDate>

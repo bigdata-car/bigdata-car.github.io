@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bigdata-car.github.io/blog</id>
-    <title>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</title>
+    <title>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</title>
     <updated>2026-01-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bigdata-car.github.io/blog"/>
-    <subtitle>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</subtitle>
+    <subtitle>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</subtitle>
     <icon>https://bigdata-car.github.io/img/kadap.jpg</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>

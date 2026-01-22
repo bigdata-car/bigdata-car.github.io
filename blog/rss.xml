@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</title>
+        <title>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</title>
         <link>https://bigdata-car.github.io/blog</link>
-        <description>자동차 산업계를 위한 IT 인프라를 지원합니다. Blog</description>
+        <description>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</description>
         <lastBuildDate>Thu, 15 Jan 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
