@@ -13,6 +13,7 @@ const config = {
   title: "자동차 산업을 위한 IT기술을 연구 합니다. ",
   // tagline: "자동차 데이터 플랫폼은 IT/SW 기술력으로 자동차 산업의 디지털 전환(DX)과 지능화(AX)를 이끄는 통합 데이터 플랫폼입니다.",
   //컨텐츠 위치 : ./src/components/index.js
+  //yarn deploy 시 자동 적용
   favicon: "img/kadap.jpg",
 
   // Set the production url of your site here
