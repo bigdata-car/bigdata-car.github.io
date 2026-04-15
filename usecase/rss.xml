@@ -4,7 +4,7 @@
         <title>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</title>
         <link>https://bigdata-car.github.io/usecase</link>
         <description>자동차 산업을 위한 IT기술을 연구 합니다.  Blog</description>
-        <lastBuildDate>Mon, 26 Jan 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Mar 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[KADaP ide 에서 나만의 container 사용하기]]></title>
             <link>https://bigdata-car.github.io/usecase/KADaP ide 에서 나만의 container 사용하기</link>
             <guid>https://bigdata-car.github.io/usecase/KADaP ide 에서 나만의 container 사용하기</guid>
-            <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[KADaP ide 에서 나만의 container 사용하기]]></description>
             <content:encoded><![CDATA[<p>본 문서에서는 KADaP GPUaaS 내 ide 에서 나만의 container 를 업로드하여 사용할 수 있는 방법 소개합니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="개요">개요<a class="hash-link" aria-label="Direct link to 개요" title="Direct link to 개요" href="https://bigdata-car.github.io/usecase/KADaP%20ide%20%EC%97%90%EC%84%9C%20%EB%82%98%EB%A7%8C%EC%9D%98%20container%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0#%EA%B0%9C%EC%9A%94">​</a></h2>
@@ -78,68 +78,10 @@
 <br>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Node.js 설치부터 React 프로젝트 시작까지]]></title>
-            <link>https://bigdata-car.github.io/usecase/React</link>
-            <guid>https://bigdata-car.github.io/usecase/React</guid>
-            <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Node.js 설치부터 React 프로젝트 시작까지]]></description>
-            <content:encoded><![CDATA[<p>프론트엔드 개발을 시작할 때 가장 먼저 진행하는 것은 개발 환경 셋팅입니다.</p>
-<p>React 프로젝트를 시작하기 위해서 반드시 Node.js가 필요합니다.</p>
-<p>왜냐하면, Node.js 위에서 모든 빌드 도구와 패키지 관리가 동작하기 때문입니다.</p>
-<p>본 글에서는 <strong>Ubuntu 환경에서 Node.js 설치 -&gt; React 프로젝트 생성 -&gt; 무료 대시보드 템플릿 실행</strong>까지 내용을 정리합니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="0-javascript-nodejs-react의-관계">0. JavaScript, Node.js, React의 관계<a class="hash-link" aria-label="Direct link to 0. JavaScript, Node.js, React의 관계" title="Direct link to 0. JavaScript, Node.js, React의 관계" href="https://bigdata-car.github.io/usecase/React#0-javascript-nodejs-react%EC%9D%98-%EA%B4%80%EA%B3%84">​</a></h2>
-<p>글을 시작하기 전 JavaScript와 Node.js, React 관계에 대해 간단하게 소개합니다.
-React는 브라우저에서 실행되지만, 개발 과정에서 사용하는 빌드, 패키지 설치, 서버 실행은 모두 Node.js가 담당하고 있습니다.
-<br> 따라서, React 개발을 위해서는 Node.js 설치가 필요합니다.</p>
-<table><thead><tr><th>구분</th><th>역할</th></tr></thead><tbody><tr><td>JavaScript</td><td>프로그래밍 언어</td></tr><tr><td>Node.js</td><td>JavaScript 실행 환경(런타임)</td></tr><tr><td>React</td><td>JavaScript로 UI를 만드는 라이브러리</td></tr></tbody></table>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-nodejs-설치">1. Node.js 설치<a class="hash-link" aria-label="Direct link to 1. Node.js 설치" title="Direct link to 1. Node.js 설치" href="https://bigdata-car.github.io/usecase/React#1-nodejs-%EC%84%A4%EC%B9%98">​</a></h2>
-<p>Node.js의 필요성에 대해 알아보았으니 설치를 진행해보겠습니다.
-<br>저는 Linux에서 24.13.0 버전을 설치하였습니다.</p>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">1) nvm 다운로드 및 설치</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) nvm 적용</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">source ~/.bashrc</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3) nvm 설치 확인</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nvm -v</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4) Node.js 다운로드 및 설치</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nvm install 24</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5) 설치 Node.js 버전 확인 및 npm 버전 확인</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">node -v</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm -v</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>KADaP Cloud 사용시, ssh를 통해 VM 접속 후 동일한 방법으로 설치하시면 됩니다.</p>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-10.png" alt="react">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-react-프로젝트-생성">2. React 프로젝트 생성<a class="hash-link" aria-label="Direct link to 2. React 프로젝트 생성" title="Direct link to 2. React 프로젝트 생성" href="https://bigdata-car.github.io/usecase/React#2-react-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1">​</a></h2>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">1 or 2 둘 중 하나 선택</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1) npm create-react-app my-react-app</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) npm create vite@latest my-react-app</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm start</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">http://localhost:3000 접속 (KADaP Cloud 사용자: http://&lt;vm ip&gt;:3000)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-15.png" alt="react">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-무료-react-dashboard-templete-실행하기">3. 무료 React Dashboard Templete 실행하기<a class="hash-link" aria-label="Direct link to 3. 무료 React Dashboard Templete 실행하기" title="Direct link to 3. 무료 React Dashboard Templete 실행하기" href="https://bigdata-car.github.io/usecase/React#3-%EB%AC%B4%EB%A3%8C-react-dashboard-templete-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0">​</a></h2>
-<p>오픈된 무료 Dashboard 템플릿을 통해 빠르게 개발 및 배포 할 수 있습니다.</p>
-<p>아래는 대표적인 무료 React dashboard templete 입니다.</p>
-<ul>
-<li>
-<p>Argon Dashboard React</p>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-16.png" alt="react">
-</li>
-<li>
-<p>Material Dashboard React</p>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-17.png" alt="react">
-</li>
-<li>
-<p>CoreUI React</p>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-18.png" alt="react">
-</li>
-<li>
-<p>AdminLTE Reac</p>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-19.png" alt="react">
-</li>
-</ul>
-<p>본 글에서는 Argon Dashboard로 시작해보겠습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-템플릿-가져오기git-clone">3.1 템플릿 가져오기(Git clone)<a class="hash-link" aria-label="Direct link to 3.1 템플릿 가져오기(Git clone)" title="Direct link to 3.1 템플릿 가져오기(Git clone)" href="https://bigdata-car.github.io/usecase/React#31-%ED%85%9C%ED%94%8C%EB%A6%BF-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0git-clone">​</a></h3>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/creativetimofficial/argon-dashboard-react.git</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-폴더-이동">3.2 폴더 이동<a class="hash-link" aria-label="Direct link to 3.2 폴더 이동" title="Direct link to 3.2 폴더 이동" href="https://bigdata-car.github.io/usecase/React#32-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%8F%99">​</a></h3>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cd argon-dashboard-react</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-패키지-설치">3.3 패키지 설치<a class="hash-link" aria-label="Direct link to 3.3 패키지 설치" title="Direct link to 3.3 패키지 설치" href="https://bigdata-car.github.io/usecase/React#33-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98">​</a></h3>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm install</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="34-실행">3.4 실행<a class="hash-link" aria-label="Direct link to 3.4 실행" title="Direct link to 3.4 실행" href="https://bigdata-car.github.io/usecase/React#34-%EC%8B%A4%ED%96%89">​</a></h3>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm start (또는) npm run dev</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-20.png" alt="react">
-<p>연결 성공!</p>]]></content:encoded>
-        </item>
-        <item>
             <title><![CDATA[LLM API로 나만의 챗봇 UI만들기]]></title>
             <link>https://bigdata-car.github.io/usecase/LLM API로 나만의 챗봇 UI만들기</link>
             <guid>https://bigdata-car.github.io/usecase/LLM API로 나만의 챗봇 UI만들기</guid>
-            <pubDate>Mon, 19 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 09 Mar 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[KADaP API 로 나만의 챗봇 만들기]]></description>
             <content:encoded><![CDATA[<p>본 문서에서는 <a href="https://api.bigdata-car.kr/" target="_blank" rel="noopener noreferrer">KADaP API</a>와 <a href="https://docs.openwebui.com/" target="_blank" rel="noopener noreferrer">Open WebUI</a>를 이용한 나만의 챗봇을 만드는 방법 소개합니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="개요">개요<a class="hash-link" aria-label="Direct link to 개요" title="Direct link to 개요" href="https://bigdata-car.github.io/usecase/LLM%20API%EB%A1%9C%20%EB%82%98%EB%A7%8C%EC%9D%98%20%EC%B1%97%EB%B4%87%20UI%EB%A7%8C%EB%93%A4%EA%B8%B0#%EA%B0%9C%EC%9A%94">​</a></h2>
@@ -242,7 +184,7 @@ Headers 에 DOCS 에서 확인한 개인 API key 를 "X-Api-Key" 이름으로 �
             <title><![CDATA[웹 애플리케이션 배포를 위한 Vercel 사용하기]]></title>
             <link>https://bigdata-car.github.io/usecase/Vercel</link>
             <guid>https://bigdata-car.github.io/usecase/Vercel</guid>
-            <pubDate>Mon, 19 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 23 Feb 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[웹 애플리케이션 배포를 위한 Vercel 사용하기]]></description>
             <content:encoded><![CDATA[<img src="https://bigdata-car.github.io/img/usecase/minju/01_vercel/image-2.png" alt="vercel">
 <p>웹 애플리케이션 배포를 위해서는 서버, 도메인, SSL 설정, CI/CD 구성, 캐시 최적화 등 많은 작업이 필요합니다.</p>
@@ -366,7 +308,7 @@ Cloudflare page는 프리요금제에도 무제한 대역폭을 제공하고 있
 <img src="https://bigdata-car.github.io/img/usecase/minju/01_vercel/image-24.png" alt="vercel">
 </li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-2-cli를-활용한-domain-생성-및-배포">4-2. CLI를 활용한 Domain 생성 및 배포<a class="hash-link" aria-label="Direct link to 4-2. CLI를 활용한 Domain 생성 및 배포" title="Direct link to 4-2. CLI를 활용한 Domain 생성 및 배포" href="https://bigdata-car.github.io/usecase/Vercel#4-2-cli%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-domain-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%B0%B0%ED%8F%AC">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-2-cli를-활용한-domain-생성-및-배포">4-2. CLI를 활용한 Domain 생성 및 배포<a class="hash-link" aria-label="Direct link to 4-2. CLI를 활용��한 Domain 생성 및 배포" title="Direct link to 4-2. CLI를 활용한 Domain 생성 및 배포" href="https://bigdata-car.github.io/usecase/Vercel#4-2-cli%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-domain-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%B0%B0%ED%8F%AC">​</a></h3>
 <ol>
 <li>
 <p>Installing Vercel CLI</p>
@@ -392,10 +334,68 @@ Cloudflare page는 프리요금제에도 무제한 대역폭을 제공하고 있
 </ol>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[Node.js 설치부터 React 프로젝트 시작까지]]></title>
+            <link>https://bigdata-car.github.io/usecase/React</link>
+            <guid>https://bigdata-car.github.io/usecase/React</guid>
+            <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Node.js 설치부터 React 프로젝트 시작까지]]></description>
+            <content:encoded><![CDATA[<p>프론트엔드 개발을 시작할 때 가장 먼저 진행하는 것은 개발 환경 셋팅입니다.</p>
+<p>React 프로젝트를 시작하기 위해서 반드시 Node.js가 필요합니다.</p>
+<p>왜냐하면, Node.js 위에서 모든 빌드 도구와 패키지 관리가 동작하기 때문입니다.</p>
+<p>본 글에서는 <strong>Ubuntu 환경에서 Node.js 설치 -&gt; React 프로젝트 생성 -&gt; 무료 대시보드 템플릿 실행</strong>까지 내용을 정리합니다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="0-javascript-nodejs-react의-관계">0. JavaScript, Node.js, React의 관계<a class="hash-link" aria-label="Direct link to 0. JavaScript, Node.js, React의 관계" title="Direct link to 0. JavaScript, Node.js, React의 관계" href="https://bigdata-car.github.io/usecase/React#0-javascript-nodejs-react%EC%9D%98-%EA%B4%80%EA%B3%84">​</a></h2>
+<p>글을 시작하기 전 JavaScript와 Node.js, React 관계에 대해 간단하게 소개합니다.
+React는 브라우저에서 실행되지만, 개발 과정에서 사용하는 빌드, 패키지 설치, 서버 실행은 모두 Node.js가 담당하고 있습니다.
+<br> 따라서, React 개발을 위해서는 Node.js 설치가 필요합니다.</p>
+<table><thead><tr><th>구분</th><th>역할</th></tr></thead><tbody><tr><td>JavaScript</td><td>프로그래밍 언어</td></tr><tr><td>Node.js</td><td>JavaScript 실행 환경(런타임)</td></tr><tr><td>React</td><td>JavaScript로 UI를 만드는 라이브러리</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-nodejs-설치">1. Node.js 설치<a class="hash-link" aria-label="Direct link to 1. Node.js 설치" title="Direct link to 1. Node.js 설치" href="https://bigdata-car.github.io/usecase/React#1-nodejs-%EC%84%A4%EC%B9%98">​</a></h2>
+<p>Node.js의 필요성에 대해 알아보았으니 설치를 진행해보겠습니다.
+<br>저는 Linux에서 24.13.0 버전을 설치하였습니다.</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">1) nvm 다운로드 및 설치</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) nvm 적용</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">source ~/.bashrc</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3) nvm 설치 확인</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nvm -v</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4) Node.js 다운로드 및 설치</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">nvm install 24</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">5) 설치 Node.js 버전 확인 및 npm 버전 확인</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">node -v</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">npm -v</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>KADaP Cloud 사용시, ssh를 통해 VM 접속 후 동일한 방법으로 설치하시면 됩니다.</p>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-10.png" alt="react">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-react-프로젝트-생성">2. React 프로젝트 생성<a class="hash-link" aria-label="Direct link to 2. React 프로젝트 생성" title="Direct link to 2. React 프로젝트 생성" href="https://bigdata-car.github.io/usecase/React#2-react-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1">​</a></h2>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">1 or 2 둘 중 하나 선택</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1) npm create-react-app my-react-app</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) npm create vite@latest my-react-app</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm start</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">http://localhost:3000 접속 (KADaP Cloud 사용자: http://&lt;vm ip&gt;:3000)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-15.png" alt="react">
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-무료-react-dashboard-templete-실행하기">3. 무료 React Dashboard Templete 실행하기<a class="hash-link" aria-label="Direct link to 3. 무료 React Dashboard Templete 실행하기" title="Direct link to 3. 무료 React Dashboard Templete 실행하기" href="https://bigdata-car.github.io/usecase/React#3-%EB%AC%B4%EB%A3%8C-react-dashboard-templete-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0">​</a></h2>
+<p>오픈된 무료 Dashboard 템플릿을 통해 빠르게 개발 및 배포 할 수 있습니다.</p>
+<p>아래는 대표적인 무료 React dashboard templete 입니다.</p>
+<ul>
+<li>
+<p>Argon Dashboard React</p>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-16.png" alt="react">
+</li>
+<li>
+<p>Material Dashboard React</p>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-17.png" alt="react">
+</li>
+<li>
+<p>CoreUI React</p>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-18.png" alt="react">
+</li>
+<li>
+<p>AdminLTE Reac</p>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-19.png" alt="react">
+</li>
+</ul>
+<p>본 글에서는 Argon Dashboard로 시작해보겠습니다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-템플릿-가져오기git-clone">3.1 템플릿 가져오기(Git clone)<a class="hash-link" aria-label="Direct link to 3.1 템플릿 가져오기(Git clone)" title="Direct link to 3.1 템플릿 가져오기(Git clone)" href="https://bigdata-car.github.io/usecase/React#31-%ED%85%9C%ED%94%8C%EB%A6%BF-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0git-clone">​</a></h3>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">git clone https://github.com/creativetimofficial/argon-dashboard-react.git</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-폴더-이동">3.2 폴더 이동<a class="hash-link" aria-label="Direct link to 3.2 폴더 이동" title="Direct link to 3.2 폴더 이동" href="https://bigdata-car.github.io/usecase/React#32-%ED%8F%B4%EB%8D%94-%EC%9D%B4%EB%8F%99">​</a></h3>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cd argon-dashboard-react</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-패키지-설치">3.3 패키지 설치<a class="hash-link" aria-label="Direct link to 3.3 패키지 설치" title="Direct link to 3.3 패키지 설치" href="https://bigdata-car.github.io/usecase/React#33-%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98">​</a></h3>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm install</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="34-실행">3.4 실행<a class="hash-link" aria-label="Direct link to 3.4 실행" title="Direct link to 3.4 실행" href="https://bigdata-car.github.io/usecase/React#34-%EC%8B%A4%ED%96%89">​</a></h3>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">npm start (또는) npm run dev</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<img src="https://bigdata-car.github.io/img/usecase/minju/02_react/image-20.png" alt="react">
+<p>연결 성공!</p>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Titanic 생존률 분석 AI 바이브 코딩으로 하기 2]]></title>
             <link>https://bigdata-car.github.io/usecase/Titanic 생존률 분석 AI 바이브 코딩으로 하기 2</link>
             <guid>https://bigdata-car.github.io/usecase/Titanic 생존률 분석 AI 바이브 코딩으로 하기 2</guid>
-            <pubDate>Sun, 11 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 19 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[데이터 분석의 시작인 타이타닉 생존률 분석을 AI 코딩으로 배워 봅니다. 구글의 Antigravity 툴에 대하여 소개 합니다.]]></description>
             <content:encoded><![CDATA[<p>본 장에서는 구글의 AI 코딩툴인 <code>Antigravity</code> 툴에 대하여 살펴 보겠습니다.</p>
 <p><code>Antigravity</code>는 MS VSCode를 기반으로 개발 되었습니다. 기본 개발 및 IDE관련 기능은 VSCode를 활용한 AI 코딩 부분은 우측 확장 기능(??)형식으로 제공하고 있습니다. 따라서 본 장에서는 VSCode에 대한 기본 내용을 포함 하고 있습니다.</p>
@@ -496,7 +496,7 @@ Cloudflare page는 프리요금제에도 무제한 대역폭을 제공하고 있
             <title><![CDATA[Titanic 생존률 분석 AI 바이브 코딩으로 하기 1]]></title>
             <link>https://bigdata-car.github.io/usecase/Titanic 생존률 분석 AI 바이브 코딩으로 하기 1</link>
             <guid>https://bigdata-car.github.io/usecase/Titanic 생존률 분석 AI 바이브 코딩으로 하기 1</guid>
-            <pubDate>Sat, 10 Jan 2026 00:00:00 GMT</pubDate>
+            <pubDate>Mon, 05 Jan 2026 00:00:00 GMT</pubDate>
             <description><![CDATA[데이터 분석의 시작인 타이타닉 생존률 분석을 AI 코딩으로 배워 봅니다. 바이브코딩의 개념 및 툴 설명을 다루고 있습니다.]]></description>
             <content:encoded><![CDATA[<p>본문에서는 데이터 분석 시작시 많이 다루는 타이타닉호 생존율 분석을 AI 바이브 코딩으로 진행 해보면서 바이브 코딩을 위한 환경 설정과 간단한 사용법을 익히려 합니다. 분석환경은 원격 리눅스 서버에 Google의 Antigravity라는 개발툴을 통해 ssh 접속을 통해 이루어 집니다. 본문에서는 리눅스 서버로 <code>자동차 산업 클라우드</code>를 활용하지만 개인이 보유한 리눅스 서버나 aws 등을 사용 할 수 있습니다.</p>
 <p>전체 문서의 구성은 3단계로 되어 있습니다.</p>
